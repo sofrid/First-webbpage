@@ -1,0 +1,273 @@
+body {
+    background-color: black;
+    color: grey;
+    font-size: 20px;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 50px;
+    grid-template-areas:
+            "header"
+            "navigation"
+            "main-content"
+            "footer";
+    grid-gap: 20px;
+}
+header{
+    background-color: black;
+    grid-area: header;
+    padding: 10px;
+    border-style: double;
+    border-color: black;
+    border-radius: 10px;
+}
+header h1{
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 50px;
+}
+h2{
+    color: gray;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3{
+    padding-top: 10px;
+    color: darkred;
+    font-family: 'Ruslan Display', cursive;
+    font-size: 27px;
+    border-style: double;
+    border-color: darkred;
+    border-radius: 5px;
+    background-color: grey;
+    text-align: center;
+}
+h4{
+    padding-top: 10px;
+    color: darkred;
+    font-family: 'Roboto', sans-serif;
+}
+label{
+    color: gray;
+    font-family: 'Roboto', sans-serif;
+}
+p{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height:130%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 7px;
+    color: gray;
+}
+.start_img{
+    width: 350px;
+    height: auto;
+    border-style: double;
+    border-color: darkred;
+    border-radius: 10px;
+}
+.annan_img{
+    width: 400px;
+    height: auto;
+}
+
+.omslag_img {
+    width: 400px;
+    height: auto;
+}
+.topplista_img {
+    width: 200px;
+    height: auto;
+}
+
+#feedback{
+    color: grey;
+}
+#newuser {
+    color: grey;
+}
+nav{
+    grid-area: navigation;
+}
+
+nav.nav_list{
+    padding: 5px;
+}
+nav.nav_list ul li {
+    background-color: darkred;
+    padding: 20px;
+    border-style: double;
+    border-color: grey;
+    border-radius: 5px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 7px;
+    color: gray;
+}
+nav.nav_list ul li a {
+    font-weight: bold;
+    color: grey;
+}
+a {
+    font-size: 18px;
+    color: blue;
+    text-decoration: none;
+}
+
+main{
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darkred;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+    border-style: double;
+    border-color: grey;
+    border-radius: 10px;
+}
+
+.flex-container > div > img{
+    background-color: darkred;
+    width: 200px;
+    margin: 10px;
+    font-size: 30px;
+    padding: 2px;
+}
+
+main article{
+    padding: 10px;
+}
+
+.indexsida {
+    padding: 10px;
+    border-style: double;
+    border-color: grey;
+    border-radius: 10px;
+}
+
+footer{
+    grid-area: footer;
+}
+
+ul.social_list{
+    text-align: center;
+    padding: 30px;
+}
+ul.social_list li{
+    display: inline-block;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Ändrar storlek på fonter */
+    h1{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    a{
+        font-size:  14px;
+    }
+
+    /* Centrerar grid-container och bestämmer 1000px bredd */
+    section.grid-container{
+        width: 1000px;
+        margin: 20px auto;
+    }
+
+    header{
+        text-align: center;
+    }
+
+    /* Ändrar grid columns till 1fr 1fr (2 enheter bredvid varandra) */
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Centerar navigeringsmenyn */
+    nav.nav_list{
+        text-align: center;
+    }
+
+    nav.nav_list ul li{
+        display: inline-block; /* Visar menyn som inline */
+        padding: 30px;
+    }
+
+    ul.social_list{ /* Döljer menyn med länkar till sociala medier */
+        display: none;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+    /* Ändrar storlek på fonter */
+    h1{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    a{
+        font-size: 15px;
+    }
+
+    /* Centrerar grid-container och bestämmer 1000px bredd */
+    section.grid-container{
+        width: 1000px;
+        margin: 20px auto;
+    }
+
+    header{
+        text-align: center;
+        color: darkred;
+
+    }
+
+    /* Ändrar grid columns till 1fr 1fr (2 enheter bredvid varandra) */
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Centerar navigeringsmenyn */
+    nav.nav_list{
+        text-align: center;
+    }
+
+    nav.nav_list ul li{
+        display: inline-block; /* Visar menyn som inline */
+        padding: 10px;
+    }
+
+    ul.social_list{ /* Döljer menyn med länkar till sociala medier */
+        display: none;
+    }
+    .flex-container {
+        flex-direction: row;
+    }
+    .omslag_img{
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "topplista": "Rein in Blood",
+      "omslag": "img/reigninblood.jpg"
+    },
+    {
+      "topplista": "Seasons in the Abyss",
+      "omslag": "img/seasonsintheabyss.jpg"
+    },
+    {
+      "topplista": "God hates us all",
+      "omslag": "img/godhatesusall.jpg"
+    }
+  ]
+}

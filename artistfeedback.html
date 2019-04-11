@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slayerfansite medlemssida</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Ruslan+Display" rel="stylesheet">
+</head>
+<body>
+<section class="grid-container">
+<header><h1><img src="img/slayerlogg.jpg" alt="Slayer bandlogga" class="start_img"></h1></header>
+    <nav class="nav_list">
+        <ul>
+            <li><a href="index.html">Startsida</a></li>
+            <li><a href="albums.html">Album</a></li>
+            <li><a href="reigninblood.html">Reign in blood</a></li>
+            <li><a href="christillusion.html">Christ Illusion</a></li>
+            <li><a href="artistfeedback.html">Medlemssida</a></li>
+        </ul>
+    </nav>
+<main>
+    <article>
+        <div id="page">
+            <form method="post" action="http://www.example.org/register">
+                <label for="username">Skapa användarnamn: </label>
+                <p><input type="text" id="username" /></p><div id="feedback"></div>
+                <label for="password">Skapa lösenord: </label>
+                <p><input type="password" id="password" /></p>
+                <p><input type="submit" value="Spara" /></p>
+            </form>
+        </div>
+    </article>
+    <article>
+<div class="third"><img src="img/slayerscen.jpg" alt="Slayer stage" class="annan_img"/></div>
+    </article>
+    <article>
+        <h2>Önskelista skivor:</h2>
+<div class="two-thirds">
+    <form id="application" action="apply.php">
+        <label for="yourname">Namn: </label>
+        <p><input type="text" id="yourname" name="yourname" /></p>
+        <label for="wishlist">Önskelista: </label>
+        <p><textarea id="wishlist" name="wishlist"></textarea></p>
+        <p><input type="submit" value="Lägg till" /></p>
+    </form>
+</div>
+    </article>
+    <article>
+        <h3>Topplista</h3>
+        <p id="content" class="topplista"></p>
+    </article>
+
+<script src="JS/data.json.js"></script>
+<script src="JS/artistsida.js"></script>
+</main>
+</section>
+</body>
+</html>
